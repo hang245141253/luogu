@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int main() {
@@ -7,7 +8,7 @@ int main() {
     cin >> threshold;
 
     // 读取两条DNA序列
-    string dna1, dna2;
+    char dna1[505], dna2[505];
     // cout << "请输入第一条DNA序列: ";
     cin >> dna1;
     // cout << "请输入第二条DNA序列: ";
@@ -21,14 +22,14 @@ int main() {
 
     // 计算相同碱基对的数量
     int matchingBasePairs = 0;
-    for (size_t i = 0; i < dna1.length(); ++i) {
+    for (size_t i = 0; dna1[i]; ++i) {
         if (dna1[i] == dna2[i]) {
             matchingBasePairs++;
         }
     }
 
     // 计算相同碱基对的比例
-    double similarityRatio = (0.0 + matchingBasePairs) / dna1.length();
+    double similarityRatio = (0.0 + matchingBasePairs) / strlen(dna1);
 
     // 输出结果
     if (similarityRatio >= threshold) {
