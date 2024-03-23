@@ -6,7 +6,6 @@ using namespace std;
 string encodePType(string str) {
     string result = "";
     int count = 1; // 初始化相邻相同数字的个数为1
-
     // 遍历字符串，从第二个字符开始统计
     for (int i = 1; i < str.length(); i++) {
         // 如果当前字符与前一个字符相同，增加相邻相同数字的个数
@@ -21,15 +20,12 @@ string encodePType(string str) {
 
     // 处理最后一个字符及其个数
     result += to_string(count) + str[str.length() - 1];
-
     return result;
 }
 
 int main() {
     string str;
     cin >> str;
-
     cout << encodePType(str) << endl;
-
     return 0;
 }
