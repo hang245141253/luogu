@@ -11,16 +11,38 @@
 //     return 0;
 // }
 
+// #include <algorithm>
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     string str, fg;
+//     getline(cin, str);
+//     for (int i = 0; i < str.size(); i++) {
+//         // 这道题末尾有个看不见的\r  windows行结尾是\r\n
+//         if (int(str[i]) == ' ' || i == str.size() - 1) {
+//             reverse(fg.begin(), fg.end());
+//             cout << fg << endl;
+//             fg = " ";
+//         } else {
+//             fg += str[i];
+//         }
+//     }
+//     return 0;
+// }
+
 #include <algorithm>
 #include <iostream>
 using namespace std;
 
 int main() {
-    string str, fg;
-    getline(cin, str);
-    for (int i = 0; i < str.size(); i++) {
-        if (int(str[i]) == ' ' || i == str.size() - 1) {
-            reverse(fg.begin(), fg.end());
+    char ss[105] = "";
+    scanf("%[^\r\n]", ss); // 正则表达式，字符匹配集 遇到\r或\n就结束
+    string str = ss, fg;
+
+    for (int i = 0; i <= str.size(); i++) {
+        if (str[i] == ' ' || i == str.size()) {
+            reverse(fg.begin(), fg.end()); 
             cout << fg << endl;
             fg = "";
         } else {
