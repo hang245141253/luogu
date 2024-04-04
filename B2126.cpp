@@ -3,7 +3,11 @@
 
 using namespace std;
 
+
+char str[100];
+
 int main() {
+    scanf("%s", str);
     int k;
     string s;
     cin >> k >> s;
