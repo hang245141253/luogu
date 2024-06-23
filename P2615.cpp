@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int a[44][44];
+int a[105][105];
 
 int main() {
     int n;
