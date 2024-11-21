@@ -20,7 +20,7 @@ int LCA(int u, int v) {
         u = fa[u];
     }
     set<int> ans;
-    ans.insert(1);
+    ans.insert(1); // 大根堆，放个-1表示找不到
     while (v != -1) {
         // if (vis.find(v) != vis.end())   return v; // 这个是找最近公共祖先，题目不是找最近的，是所有祖先中最大的。
         if (vis.find(v) != vis.end()) {
