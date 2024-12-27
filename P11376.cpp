@@ -10,18 +10,18 @@ int a[N], b[N];
 
 int main() {
     cin >> n >> m >> x;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++) {  // n个站点
         int p, c;
         cin >> p >> c;
         st.push_back(make_pair(p, c));
     }
     sort(st.begin(), st.end()); // 按站点位置排序
 
-    for (int i = 1; i <= m; i++) {
+    for (int i = 1; i <= m; i++) {  // m个车
         cin >> a[i] >> b[i];
     }
 
-    vector<pair<int, int>> neg, pos;
+    vector<pair<int, int>> neg, pos;    // 车去某市的权重、车的编号
     ll res = 0;
 
     // 将货车按需求分成两类

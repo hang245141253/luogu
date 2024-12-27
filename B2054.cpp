@@ -2,11 +2,12 @@
 using namespace std;
 
 int main() {
-    int n;
+    int n, i;
     cin >> n;
+    n = i;
     double sum = 0.0;
     int tmp;
-    for (int i = 0; i < n; i++) {
+    while (i--) {
         cin >> tmp;
         sum += tmp;
     }

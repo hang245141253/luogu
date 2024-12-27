@@ -14,5 +14,5 @@ int main() {
     }
     printf("%d %d %d %d", sum_j, sum_y, sum_t, sum_j + sum_y + sum_t);
 
-        return 0;
+    return 0;
 }
