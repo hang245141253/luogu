@@ -18,9 +18,9 @@ void f1() {
         int i = 2;
         while (i != tmp) {
             int c = a + b;
+            i++;
             a = b;
             b = c;
-            i++;
         }
         cout << b << endl;
     }
