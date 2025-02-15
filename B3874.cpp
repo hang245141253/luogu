@@ -37,6 +37,8 @@ void merge_sort(int *arr, int l, int r) {
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     buff = new int[300005]; 
     int n;
     cin >> n;

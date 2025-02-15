@@ -1,5 +1,5 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 using namespace std;
 
 int arr[1000006];
@@ -11,11 +11,11 @@ int main() {
     while (m--) {
         int tmp;
         cin >> tmp;
-        int idx = lower_bound(arr, arr + n, tmp) - arr;
-        if (*lower_bound(arr, arr + n, tmp) != tmp) {
+        auto it = lower_bound(arr, arr + n, tmp);
+        if (it == arr + n || *it != tmp) {
             cout << -1;
         } else {
-            cout << idx + 1;    // arr下标从0开始，题目要求从1开始，所以+1
+            cout << (it - arr) + 1;  // arr下标从0开始，题目要求从1开始，所以+1
         }
         m && printf(" ");
     }

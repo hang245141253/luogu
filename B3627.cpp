@@ -7,7 +7,8 @@ bool check(long long n, double mid) {
 }
 
 double my_cbrt(long long n) {
-    double min = 1, max = 1e15, mid;
+    if (n == 1) return 1;
+    double min = 1, max = n, mid;
     #define EPSL 1e-10
     while (max - min > EPSL) {
         mid = (max + min) / 2.0;
