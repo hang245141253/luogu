@@ -3,7 +3,7 @@ using namespace std;
 
 #define MAX_N 100
 
-void init(int n, int* arr, int &mmax) {
+void init(int n, int arr[], int &mmax) {
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
         mmax = max(mmax, arr[i]);
