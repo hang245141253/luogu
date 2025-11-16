@@ -33,15 +33,15 @@ void dfs(int n) {
 int n, a, b, c;
 int ans;
 const int N = 2 * 1e5;
-vector<int> dp(N + 5, -1); // 初始化记忆化数组，-1表示未计算
+int mem[N + 5]; // 初始化记忆化数组
 
 int dfs(int n) {
     if (n <= c)         return 1;       // 如果到达或小于c，计为一种方案
-    if (dp[n] != -1)    return dp[n];   // 如果已经计算过，直接返回结果
+    if (mem[n])         return mem[n];   // 如果已经计算过，直接返回结果
     
     // 递归计算，并存储结果到dp数组
-    dp[n] = (dfs(n - a) + dfs(n - b)) % int(1e9 + 7);
-    return dp[n];
+    mem[n] = (dfs(n - a) + dfs(n - b)) % int(1e9 + 7);
+    return mem[n];
 }
 
 int main() {
